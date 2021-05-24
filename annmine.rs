@@ -16,7 +16,7 @@ use tokio::sync::mpsc::{self, Receiver, Sender, UnboundedReceiver};
 
 const RECENT_WORK_BUF: usize = 16;
 const MAX_ANN_BATCH_SIZE: usize = 1024;
-const MAX_MS_BETWEEN_POSTS: u64 = 20_000;
+const MAX_MS_BETWEEN_POSTS: u64 = 30_000;
 
 struct AnnBatch {
     parent_block_height: i32,
@@ -31,7 +31,7 @@ struct Handler {
     send_upload: Sender<AnnBatch>,
 }
 
-const STATS_SECONDS_TO_KEEP: usize = 5;
+const STATS_SECONDS_TO_KEEP: usize = 7;
 
 #[derive(Default, Clone, Copy)]
 struct AnnsPerSecond {
