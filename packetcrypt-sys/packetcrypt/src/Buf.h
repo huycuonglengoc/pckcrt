@@ -26,7 +26,7 @@ typedef union {
 } Buf32_t;
 _Static_assert(sizeof(Buf32_t) == 32, "buf16 size");
 typedef union {
-    Buf_TYPES(32);
+    Buf_TYPES(64);
     Buf16_t sixteens[2];
     Buf32_t thirtytwos[2];
 } Buf64_t;
