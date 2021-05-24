@@ -30,7 +30,7 @@ typedef union {
     Buf16_t sixteens[2];
     Buf32_t thirtytwos[2];
 } Buf64_t;
-_Static_assert(sizeof(Buf64_t) == 32, "buf64 size");
+_Static_assert(sizeof(Buf64_t) == 64, "buf64 size");
 
 #define Buf_IS_ARRAY(arg) __builtin_types_compatible_p( \
     __typeof__(arg), __typeof__((arg)[0]) [ ])
