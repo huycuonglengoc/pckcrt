@@ -41,7 +41,7 @@ typedef struct {
 
     Announce_Merkle merkle;
     Buf32_t annHash0; // hash(announce || parentBlockHash)
-    Buf32_t annHash1; // hash(announce || merkleRoot)
+    Buf64_t annHash1; // hash(announce || merkleRoot)
 
     Buf32_t parentBlockHash;
     char* content;
